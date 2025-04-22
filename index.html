@@ -1,23 +1,79 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mariia Parfeniuk</title>
+    <style>
+      body {
+        font-family: system-ui, sans-serif;
+        background: #f9f9f9;
+        color: #333;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        max-width: 700px;
+        margin: 4rem auto;
+        background: white;
+        padding: 2rem 3rem;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+      }
+      h1 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+      }
+      h2 {
+        margin-top: 2rem;
+        color: #555;
+      }
+      a {
+        color: #007acc;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      .emoji {
+        font-style: normal;
+        font-size: 1.2rem;
+      }
+    </style>
   </head>
   <body>
-    <h1>Hello! My name is Mariia Parfeniuk 👋</h1>
-    <h2>👩‍💻 About Me</h2>
-    <p>
-      I'm a Test Automation Engineer with 5 years of hands-on experience in building and maintaining UI and API tests.
-      My main tools are JavaScript and TypeScript, and I focus on writing reliable, readable, and maintainable tests
-      that integrate seamlessly into CI/CD workflows. I enjoy sharing practical insights, real-world lessons, and a bit
-      of humor from the world of automated testing.
-    </p>
-    <h2>📝 My Publications:</h2>
-    <p><a href="https://habr.com/ru/articles/559974/">Getting Started with Load Testing Using Artillery.io (RU)</a></p>
+    <div class="container">
+      <h1>Hello! My name is Mariia Parfeniuk 👋</h1>
 
-    <h2>📬 Contacts</h2>
-    <p><a href="https://t.me/assert_life">assert.life</a></p>
-    <p><a href="https://www.linkedin.com/in/mariia-parfeniuk-508008189/">LinkedIn →</a></p>
+      <h2 class="emoji">👩‍💻 About Me</h2>
+      <p>
+        I'm a Test Automation Engineer with 5 years of hands-on experience in building and maintaining UI and API
+        tests.<br />
+        My main tools are <strong>JavaScript</strong> and <strong>TypeScript</strong>, and I focus on writing reliable,
+        readable, and maintainable tests that integrate seamlessly into CI/CD workflows.<br />
+        I enjoy sharing practical insights, real-world lessons, and a bit of humor from the world of automated testing.
+      </p>
+
+      <h2 class="emoji">📝 My Publications</h2>
+      <ul>
+        <li>
+          <a href="https://habr.com/ru/articles/559974/" target="_blank">
+            Getting Started with Load Testing Using Artillery.io (RU)
+          </a>
+        </li>
+        <li>
+          <a href="https://habr.com/ru/articles/903242/" target="_blank">
+            Cypress + axe-core: Quick Start for Accessibility Testing (RU)
+          </a>
+        </li>
+      </ul>
+
+      <h2 class="emoji">📬 Contacts</h2>
+      <ul>
+        <li><a href="https://t.me/assert_life" target="_blank">Telegram: @assert_life</a></li>
+        <li><a href="https://www.linkedin.com/in/mariia-parfeniuk-508008189/" target="_blank">LinkedIn →</a></li>
+      </ul>
+    </div>
   </body>
 </html>
