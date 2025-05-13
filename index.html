@@ -23,6 +23,20 @@
         margin: 0;
         padding: 0;
       }
+      a.skip-link {
+        position: absolute;
+        top: -40px;
+        left: 0;
+        background: #007acc;
+        color: white;
+        padding: 8px 16px;
+        z-index: 100;
+        text-decoration: none;
+        transition: top 0.3s;
+      }
+      a.skip-link:focus {
+        top: 0;
+      }
       .container {
         max-width: 700px;
         margin: 4rem auto;
@@ -49,9 +63,14 @@
         text-decoration: none;
         transition: color 0.2s ease-in-out;
       }
-      a:hover {
+      a:hover, a:focus {
         text-decoration: underline;
         color: #005999;
+        outline: none;
+      }
+      a:focus {
+        outline: 2px solid #007acc;
+        outline-offset: 2px;
       }
       .emoji {
         font-style: normal;
@@ -67,13 +86,23 @@
         transform: scale(1.02);
         box-shadow: 0 6px 16px rgba(0,0,0,0.2);
       }
+      .visually-hidden {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
       footer {
         text-align: center;
         margin-top: 3rem;
         font-size: 0.9rem;
         color: #777;
       }
-
       /* Dark Mode */
       @media (prefers-color-scheme: dark) {
         body {
@@ -87,7 +116,7 @@
         a {
           color: #4eaaff;
         }
-        a:hover {
+        a:hover, a:focus {
           color: #2e8ee6;
         }
         footer {
@@ -97,7 +126,11 @@
     </style>
   </head>
   <body>
-    <div class="container">
+    <a href="#main" class="skip-link">Skip to main content</a>
+
+    <main id="main" class="container">
+      <h1 class="visually-hidden">Mariia Parfeniuk Personal Page</h1>
+
       <h1>Hello! My name is Mariia Parfeniuk 👋</h1>
 
       <h2 class="emoji">👩‍💻 About Me</h2>
@@ -161,7 +194,7 @@
         </li>
       </ul>
 
-      <h2 class="emoji">👩‍💻 Mentorship in Women in Tech</h2>
+      <h2 class="emoji">🤝 Mentorship in Women in Tech</h2>
       <p>
         I'm proud to be part of the <strong>Women in Tech Russia</strong> and <strong>Women in Big Data</strong> communities. 
         I’ve participated as a mentor in the <strong>Mentor in Tech 4.0</strong> and <strong>5.0</strong> programs, helping others grow in their careers and supporting the development of our tech community.
@@ -170,8 +203,8 @@
         This experience is especially meaningful to me, and I look forward to continuing my journey as a mentor in future programs.
       </p>
       <div style="display: flex; flex-direction: column; gap: 1rem; margin: 1.5rem 0;">
-        <img src="mentor-tech-4.jpg" alt="Mentor in Tech 4.0 Certificate" />
-        <img src="mentor-tech-5.jpg" alt="Mentor in Tech 5.0 Certificate" />
+        <img src="mentor-tech-4.jpg" alt="Certificate of participation as a mentor in Tech 4.0 program" />
+        <img src="mentor-tech-5.jpg" alt="Certificate of participation as a mentor in Tech 5.0 program" />
       </div>
 
       <h2 class="emoji">📬 Contacts</h2>
@@ -179,7 +212,7 @@
         <li><a href="https://t.me/assert_life" target="_blank">Telegram: @assert_life</a></li>
         <li><a href="https://www.linkedin.com/in/mariia-parfeniuk-508008189/" target="_blank">LinkedIn →</a></li>
       </ul>
-    </div>
+    </main>
 
     <footer>
       Built with ❤️ using <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>
