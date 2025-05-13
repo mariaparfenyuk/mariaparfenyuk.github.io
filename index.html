@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mariia Parfeniuk</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👩‍💻</text></svg>">
+
+    <!-- SEO & Open Graph -->
+    <meta name="description" content="Mariia Parfeniuk — Test Automation Engineer. My projects, articles, and mentorship activities.">
+    <meta property="og:title" content="Mariia Parfeniuk — Portfolio" />
+    <meta property="og:description" content="Test Automation Engineer, sharing knowledge on testing, automation, and accessibility." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://mariaparfenyuk.github.io/" />
+    <meta property="og:image" content="https://mariaparfenyuk.github.io/preview.png" />
+
     <style>
       body {
         font-family: system-ui, sans-serif;
@@ -18,28 +27,72 @@
         max-width: 700px;
         margin: 4rem auto;
         background: white;
-        padding: 2rem 3rem;
+        padding: 2rem 1rem;
         border-radius: 12px;
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+      }
+      @media (min-width: 600px) {
+        .container {
+          padding: 2rem 3rem;
+        }
       }
       h1 {
         font-size: 2rem;
         margin-bottom: 0.5rem;
       }
-      h2 {
+      h2, h3 {
         margin-top: 2rem;
         color: #555;
       }
       a {
         color: #007acc;
         text-decoration: none;
+        transition: color 0.2s ease-in-out;
       }
       a:hover {
         text-decoration: underline;
+        color: #005999;
       }
       .emoji {
         font-style: normal;
         font-size: 1.2rem;
+      }
+      img {
+        max-width: 100%;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      img:hover {
+        transform: scale(1.02);
+        box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+      }
+      footer {
+        text-align: center;
+        margin-top: 3rem;
+        font-size: 0.9rem;
+        color: #777;
+      }
+
+      /* Dark Mode */
+      @media (prefers-color-scheme: dark) {
+        body {
+          background: #1e1e1e;
+          color: #ddd;
+        }
+        .container {
+          background: #2b2b2b;
+          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+        a {
+          color: #4eaaff;
+        }
+        a:hover {
+          color: #2e8ee6;
+        }
+        footer {
+          color: #999;
+        }
       }
     </style>
   </head>
@@ -49,10 +102,8 @@
 
       <h2 class="emoji">👩‍💻 About Me</h2>
       <p>
-        I'm a Test Automation Engineer with 5 years of hands-on experience in building and maintaining UI and API
-        tests.<br />
-        My main tools are <strong>JavaScript</strong> and <strong>TypeScript</strong>, and I focus on writing reliable,
-        readable, and maintainable tests that integrate seamlessly into CI/CD workflows.<br />
+        I'm a Test Automation Engineer with 5 years of hands-on experience in building and maintaining UI and API tests.<br />
+        My main tools are <strong>JavaScript</strong> and <strong>TypeScript</strong>, and I focus on writing reliable, readable, and maintainable tests that integrate seamlessly into CI/CD workflows.<br />
         I enjoy sharing practical insights, real-world lessons, and a bit of humor from the world of automated testing.
       </p>
 
@@ -67,33 +118,48 @@
       </ul>
 
       <h2 class="emoji">📝 My Publications</h2>
+
+      <h3>🌟 Featured Article</h3>
+      <ul>
+        <li>
+          <a href="https://medium.com/@mariiaparfeniuk/how-to-understand-if-your-service-can-handle-the-load-metrics-every-engineer-should-know-cf846c655dac" target="_blank">
+            [EN] How to Understand If Your Service Can Handle the Load (Medium)
+          </a>
+        </li>
+      </ul>
+
+      <h3>📊 Load & Performance Testing</h3>
       <ul>
         <li>
           <a href="https://habr.com/ru/articles/909002/" target="_blank">
-            How to Understand If Your Service Can Handle the Load: Metrics Every Engineer Should Know (RU)
+            [RU] How to Understand If Your Service Can Handle the Load (Habr)
           </a>
         </li>
         <li>
           <a href="https://habr.com/ru/articles/559974/" target="_blank">
-            Getting Started with Load Testing Using Artillery.io (RU)
+            [RU] Getting Started with Load Testing Using Artillery.io (Habr)
           </a>
         </li>
+      </ul>
+
+      <h3>♿ Accessibility Testing</h3>
+      <ul>
         <li>
           <a href="https://habr.com/ru/articles/903242/" target="_blank">
-            Cypress + axe-core: Quick Start for Accessibility Testing (RU)
+            [RU] Cypress + axe-core: Quick Start for Accessibility Testing (Habr)
           </a>
         </li>
         <li>
           <a href="https://habr.com/ru/articles/905146/" target="_blank">
-            5 ideas for accessibility tests you can automate today (RU)
+            [RU] 5 ideas for accessibility tests you can automate today (Habr)
           </a>
         </li>
         <li>
           <a href="https://habr.com/ru/articles/907396/" target="_blank">
-            Everything that can be automated should be automated — even aria-label. (RU)
+            [RU] Everything that can be automated should be automated — even aria-label (Habr)
           </a>
         </li>
-      </ul>  
+      </ul>
 
       <h2 class="emoji">🌟 Mentorship in Women in Tech</h2>
       <p>
@@ -103,10 +169,9 @@
       <p>
         This experience is especially meaningful to me, and I look forward to continuing my journey as a mentor in future programs.
       </p>
-
       <div style="display: flex; flex-direction: column; gap: 1rem; margin: 1.5rem 0;">
-        <img src="mentor-tech-4.jpg" alt="Mentor in Tech 4.0 Certificate" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
-        <img src="mentor-tech-5.jpg" alt="Mentor in Tech 5.0 Certificate" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
+        <img src="mentor-tech-4.jpg" alt="Mentor in Tech 4.0 Certificate" />
+        <img src="mentor-tech-5.jpg" alt="Mentor in Tech 5.0 Certificate" />
       </div>
 
       <h2 class="emoji">📬 Contacts</h2>
@@ -115,5 +180,9 @@
         <li><a href="https://www.linkedin.com/in/mariia-parfeniuk-508008189/" target="_blank">LinkedIn →</a></li>
       </ul>
     </div>
+
+    <footer>
+      Built with ❤️ using <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>
+    </footer>
   </body>
 </html>
